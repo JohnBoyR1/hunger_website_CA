@@ -1,0 +1,299 @@
+/* Lorenzo's CSS start */
+
+/*color pallette(light to dark): #F0F5F9, #C9D6DF, #52616B, #1E2022 */
+
+
+/* FONTS
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 700
+	HEADER FONT
+.oswald-<uniquifier> {
+	font-family: "Oswald", serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+	TEXT FONT
+.open-sans-<uniquifier> {
+	font-family: "Open Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+
+*/
+
+h1,h2,h3,h4,h5,h6,label
+{
+	font-family: "Oswald", serif !important;
+	font-optical-sizing: auto !important;
+	font-weight: 600 !important;
+	font-style: normal !important;
+	color: #1E2022;
+}
+
+body
+{
+	font-family: "Open Sans", serif !important;
+	font-optical-sizing: auto !important;
+	font-weight: 400 !important;
+	font-style: normal !important;
+	font-variation-settings: "wdth" 100 !important;
+	color: #1E2022;
+	background-color: #C9D6DF;
+	background-image: url("../img/bg-img.png");
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.navbar
+{
+	padding: 10px;
+	position:fixed; 
+	width:100%;
+	z-index: 99; /* forces navbar to remain in foreground - prevents content overlapping */
+	background-color: #C9D6DF !important;
+}
+
+.navbar_text
+{
+	padding-left: 5%;
+	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white !important;
+}	
+
+.card_body_index
+{
+	display: flex; 
+	flex-direction: column; /* displays card content as a column*/
+	background-color: #F0F5F9 !important;
+}
+
+.card_index:hover
+{
+	transform: scale(1.03); /*increases text font size when user hovers over hyperlink text*/
+	border: 2px solid #52616B;
+
+}
+
+.pageHeader
+{
+	padding-top: 75px; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
+	padding-bottom: 10px;
+	background-color: #52616B;
+	border-radius: 5px;
+	border: 5px solid #1E2022;
+	border-top-style: none;
+	/*adds shadow around each letter, adds a gradient that fades as it moves away from the letter*/
+	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white;
+}
+
+.body_header
+{
+	background-color: #C9D6DF;
+	/*adds shadow around each letter, adds a gradient that fades as it moves away from the letter*/
+	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white;
+	margin: -5px;
+	padding: 5px;
+}
+
+.body_text
+{
+	border-radius: 5px;
+	background-color: #F0F5F9;
+	padding: 5px;
+	border: 2px solid #52616B;
+}
+
+.contact_link
+{
+	border-radius: 5px;
+	background-color: #C9D6DF;
+	margin: 5px;
+	padding: 5px;
+	border: 2px solid #52616B;
+}
+
+#commentSection
+{
+	border-radius: 5px;
+	background-color: #F0F5F9;
+	padding: 5px;
+}
+
+.carousel-caption
+{
+	/*adds shadow around each letter, adds a gradient that fades as it moves away from the letter*/
+	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white;
+}
+
+#newsletterActive
+{
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.text_link
+{
+	text-decoration: none;
+	color: black;
+}
+
+.text_link:hover
+{
+	color: blue;
+}
+
+.sr-only
+{
+	font-weight: bold !important; 
+	border: 3px solid grey !important;
+	border-style: inset !important;
+	padding: 2px;
+	color: #000000 !important;
+}
+
+.nav-link
+{
+	color: black !important;
+}
+
+.nav-link-close:hover
+{
+	
+	color: blue !important;
+}
+
+.nav-link:hover
+{
+	color: blue !important;	
+}
+
+.navbar-toggler
+{
+	background-color: #F0F5F9;
+	color: #52616B;
+	margin: 10px;
+}
+
+.navbar-light
+{
+	background-color: #F0F5F9; !important;
+    /*border: none !important;*/
+    border-width:5px!important;
+	border-style: solid;
+}
+
+@media (max-width: 305px) {
+	.pageHeader 
+	{
+		padding-top: 210px;
+	}
+   
+}
+
+@media (min-width: 320px) {
+	.navbar
+	{
+	padding: 0px;
+	margin-right: 0px;
+	}
+   
+}
+
+/*sizes contact page images to center and restrict width to ensure padding between viewport edges on viewports of 430pixel width or less*/
+@media (max-width: 575px)
+{
+	.contact_link
+	{
+		width: 80%;
+		height: 110%;
+		margin: 0 auto 0 auto;
+		object-fit: scale-down;
+	}
+	
+	.card
+	{
+		width: 80%;
+		margin: 0 auto 0 auto;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 767px) 
+{
+	.carousel_toggle
+	{
+		display: none;
+	}
+	
+	.carousel_box{
+		display: none !important;
+	}
+	/* Jean's CSS */
+	#topper { /*heading in mobile view or below 767px*/
+		
+		padding: 100px 20px 20px 20px; /*padding around headings to better position text on smaller screens*/
+	}
+	
+}
+
+/* Lorenzo's CSS end */
+
+/* Jean's CSS starts */
+@media (min-width: 767px) { /*768px until larger*/
+	#topper {
+		display: none !important;
+	}
+	.carousel_box {					/*Kitchen-home-page spacing under fixed header from 767px*/
+		padding-top: 60px;
+	}
+	#carousel_kitchen_caption h5 {
+		font-size: 2rem;
+	}
+	#carousel_kitchen_caption p {
+		font-size: 1.2rem;
+	}
+	
+}
+/*Kitchen.html page*/
+.carousel_box {
+	padding-top: 60px;
+}
+
+
+
+.carousel_kitchen_caption {
+	/*clamp(min value property can take, prefered viewport size vh or vw, largest value property will take)*/
+	font-size: clamp(2rem, 5vh, 8rem); /*(min font size, viewport hieight 5% of the viewport, max font size)*/
+	font-weight: bold;
+	color: black;
+	/*center the caption*/
+	position: absolute; /* position freely inside the parent element */
+	top: 50%; /*positon middle of top and bottom of container*/
+	left: 50%; /*position middle of left and right of the container */
+	transform: translate(-50%, -50%); /* in conjuction with the the top 2 this ensure for perfect center*/
+	text-align: center; /* is used to center the text with in the container that above was centered */
+	
+	
+	
+}
+
+
+
+
+/*form being implemented in kitchen signup page*/
+
+/*form bootstrap*/
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
